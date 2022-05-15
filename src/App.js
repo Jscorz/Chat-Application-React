@@ -7,6 +7,7 @@ function App() {
   const [nameInput, setNameInput] = useState('');
   const [room, setRoom] = useState('');
   const [socket] = useSocket('<https://open-chat-naostsaecf.now.sh>');
+  const [data, setData] = useImmer(default_value);
 
   socket.connect();
   console.log(socket);

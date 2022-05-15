@@ -34,11 +34,9 @@ function App() {
       });
     });
 
-    socket.on('update', (message) => {
-      setMessages((draft) => {
-        draft.push(['', message]);
-      })
-  });
+socket.on('update',message => setMessages(draft => {
+  draft.push(['',message])
+}))
 
   const handleSubmit = (e) => {
     e.preventDefault();
